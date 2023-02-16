@@ -1,0 +1,104 @@
+@import "libs/reset.scss";
+@import "libs/responsive.scss";
+@import "libs/functions.scss";
+@import "libs/mixins.scss";
+
+
+
+$primary:#814545;
+
+%btn{
+    padding: rem(5, 16) rem(12, 16);
+    border-radius: 3px;
+}
+html, body{
+    font-size: rem(16);
+}
+body{
+    background-color: aqua;
+}
+@media #{$medium-up} {
+    .btn{
+        width: 100%;
+    }
+    
+}
+
+.tables{
+    width: 100%;
+
+    td{
+        border: 1px solid #ccc;
+        &:hover{
+        background: lighten($primary, 20);
+        }
+    }
+    thead{
+        background: #000;
+        color: #fff;
+        background: {
+            color: #000;
+            repeat: no-repeat;
+        }
+    }
+    tbody{
+        tr{
+
+            th{
+                background: #4156bf;
+                &:hover{
+                    background: darken($primary, 20); 
+                }
+           }
+        }
+
+    }
+
+}
+.btn{
+     @extend %btn;
+    background: rgb(186, 3, 125);
+    &:hover{ // pour coller :
+        background: #e30e0e;
+    }
+    .theme-vert & {// pour .btn qui se trouve dans .theme-vert
+        background: #0ee35c;
+    }
+    @media only screen and (max-width: 1200px) {
+        padding: 10px;
+        
+    }
+}
+
+.call-to-action{
+    @extend .btn;
+}
+.card{
+    background: #e30e0e;
+    text-align: center;
+    @include rotate(60deg)
+  }
+.card2{
+    position: relative;
+    background: #4e15ac;
+    text-align: center;
+    @include transform(rotate(30deg));
+  }
+.card2::after{
+    content:'';
+    width: 0;
+    height: 0;
+    border-top: 10px solid #f00;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 10px)
+  }
+  .card3{
+    position: relative;
+    margin-top: 10rem;
+    background: #32e30e;
+    text-align: center;
+    @include triangle(red, 15px)
+  }

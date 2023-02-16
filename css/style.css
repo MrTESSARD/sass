@@ -1,0 +1,119 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button, input, select {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+img, video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+.btn, .call-to-action {
+  padding: 0.3125rem 0.75rem;
+  border-radius: 3px; }
+
+html, body {
+  font-size: 1rem; }
+
+body {
+  background-color: aqua; }
+
+@media only screen and (max-width: 768px) {
+  .btn, .call-to-action {
+    width: 100%; } }
+.tables {
+  width: 100%; }
+  .tables td {
+    border: 1px solid #ccc; }
+    .tables td:hover {
+      background: #b67676; }
+  .tables thead {
+    background: #000;
+    color: #fff;
+    background-color: #000;
+    background-repeat: no-repeat; }
+  .tables tbody tr th {
+    background: #4156bf; }
+    .tables tbody tr th:hover {
+      background: #3f2121; }
+
+.btn, .call-to-action {
+  background: #ba037d; }
+  .btn:hover, .call-to-action:hover {
+    background: #e30e0e; }
+  .theme-vert .btn, .theme-vert .call-to-action {
+    background: #0ee35c; }
+  @media only screen and (max-width: 1200px) {
+    .btn, .call-to-action {
+      padding: 10px; } }
+
+.card {
+  background: #e30e0e;
+  text-align: center;
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg); }
+
+.card2 {
+  position: relative;
+  background: #4e15ac;
+  text-align: center;
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  -moz-animation: rotate(30deg);
+  transform: rotate(30deg); }
+
+.card2::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 10px solid #f00;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 10px); }
+
+.card3 {
+  position: relative;
+  margin-top: 10rem;
+  background: #32e30e;
+  text-align: center; }
+  .card3::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 15px solid red;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 15px); }
+
+/*# sourceMappingURL=style.css.map */
