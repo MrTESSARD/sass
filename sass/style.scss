@@ -5,7 +5,7 @@
 
 
 
-$primary:#814545;
+$primary:#4a4a4a;
 
 %btn{
     padding: rem(5, 16) rem(12, 16);
@@ -58,6 +58,15 @@ body{
 .btn{
      @extend %btn;
     background: rgb(186, 3, 125);
+    text-decoration: none;
+    background: $primary;
+    @debug lightness($primary);
+    @if (lightness($primary)>50%) {
+        color: #000000;
+
+    }@else{
+        color: #fff;
+    }
     &:hover{ // pour coller :
         background: #e30e0e;
     }
@@ -101,4 +110,29 @@ body{
     background: #32e30e;
     text-align: center;
     @include triangle(red, 15px)
+  }
+
+  @for $i from 1 through 4 {
+    .m-#{$i}{
+      margin: 0 $i * 1rem;
+    }
+  
+  }
+
+  $animals: bear, lion, camel;
+  @each $animal in $animals{
+    .icon-#{$animal}{
+        background: url(img/#{animal}.png);
+    }
+  }
+
+  $categories:
+  chien #ff0000,
+  chat #00FF00,
+  poissont #0000ff;
+  
+  @each $categorie in $categories{
+    .#{nth($categorie, 1)}{
+        background: nth($categorie, 2);
+    }
   }
